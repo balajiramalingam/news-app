@@ -17,7 +17,7 @@ export class ArticleService {
     new BehaviorSubject<Article[]>([]);
 
   constructor(private http:Http) {
-    this.refreshArticles();
+    this.updateArticles();
    }
 
   public getArticles():BehaviorSubject<Article[]> {
@@ -25,7 +25,7 @@ export class ArticleService {
   } 
 
 
-  public refreshArticles(sourceKey = 'reddit-r-all'): void {
+  public updateArticles(sourceKey = 'bbc-news'): void {
     // make the http request -> Observable
     // map response into article class
     // update our subject
