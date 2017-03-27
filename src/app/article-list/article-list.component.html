@@ -1,4 +1,6 @@
-<md-card class="app-article-list">
+<router-outlet name="articledetails"></router-outlet>
+
+<md-card fxLayout="row" fxLayoutWrap fxLayoutAlign="center" class="app-article-list">
 <app-article
       *ngFor="let article of articles | async"
       [article]="article"

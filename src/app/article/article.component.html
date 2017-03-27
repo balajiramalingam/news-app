@@ -1,13 +1,13 @@
-<md-card class="app-article-card">
+<md-card fxLayout="column" class="app-article-card">
   
-  <md-card-header>
-    <md-card-title>{{article.title}}</md-card-title>
+  <md-card-header fxFlex="20%">
+    <md-card-title class="article-title">{{article.title}}</md-card-title>
   </md-card-header>
-  
-  <md-card-content>
-    <img md-card-image src="{{article.urlToImage}}">
-    <p>
+  <md-card-content fxLayout="column" fxFlex="80%">
+    <img fxFlex="60%" md-card-image src="{{article.urlToImage}}">
+    <p fxFlex="40%" class="article-info">
       {{article.description}}
+      <a class="article-link" href="{{article.url}}" target="_blank"> More...</a>
     </p>
   </md-card-content>
 </md-card>

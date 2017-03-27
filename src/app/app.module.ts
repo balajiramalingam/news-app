@@ -1,3 +1,4 @@
+// External dependencies
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -6,6 +7,7 @@ import { MaterialModule } from '@angular/material';
 import { RouterModule, Routes }   from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+// Application dependencies
 import { routes } from './app.route';
 import { AppComponent } from './app.component';
 import { ArticleListComponent } from './article-list/article-list.component';
@@ -22,7 +24,7 @@ import { ArticleService } from './article.service';
     FormsModule,
     HttpModule,
     MaterialModule,
-    FlexLayoutModule,
+    FlexLayoutModule.forRoot(),
     RouterModule.forRoot(routes)
   ],
   providers: [ ArticleService ],

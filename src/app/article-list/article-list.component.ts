@@ -1,14 +1,16 @@
+// External dependencies
 import { Component, OnInit, Input } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 
+// Application dependencies
 import { ArticleService } from '../article.service';
 import { Article } from '../article';
 
 @Component({
   selector: 'app-article-list',
   templateUrl: './article-list.component.html',
-  styleUrls: ['./article-list.component.css']
+  styleUrls: ['./article-list.component.scss']
 })
 
 export class ArticleListComponent implements OnInit {

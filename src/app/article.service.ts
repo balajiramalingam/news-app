@@ -1,12 +1,12 @@
+// Application dependencies
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions, URLSearchParams } from '@angular/http';
-
 import {Observable, BehaviorSubject} from 'rxjs/Rx';
 // Import RxJs required methods
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch'
 
-
+// External dependencies
 import { environment } from '../environments/environment';
 import { Article }           from './article';
 
@@ -17,7 +17,7 @@ export class ArticleService {
     new BehaviorSubject<Article[]>([]);
 
   constructor(private http:Http) {
-    this.updateArticles();
+    
    }
 
   public getArticles():BehaviorSubject<Article[]> {
