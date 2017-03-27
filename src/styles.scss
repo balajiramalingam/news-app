@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/core/theming/all-theme';
+@include mat-core();
+$primary: mat-palette($mat-green, 500, 100, 700);
+$accent:  mat-palette($mat-pink, A200, A100, A400);
+$warn:    mat-palette($mat-red);
+$theme: mat-light-theme($primary, $accent, $warn);
+@include angular-material-theme($theme);
+
+body{
+    margin:0px;
+    width: 100%;
+}
+.example-fill-remaining-space {
+  flex: 1 1 auto;
+}
+
